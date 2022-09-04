@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "916555935370",
+    "project_id": "chuck-norris-57f42",
+    "storage_bucket": "chuck-norris-57f42.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:916555935370:android:41a40a26a0c210e758c773",
+        "android_client_info": {
+          "package_name": "com.bulkin.prod.chuck_norris"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "916555935370-tk75a05bono6hm5v9kqnbemb9jkvbrnc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjzTijld8emQ3GAKTufGIsm8zWzaAn12Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "916555935370-tk75a05bono6hm5v9kqnbemb9jkvbrnc.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "916555935370-57dkenqqv15uqv6u2ekv4e1q684o8dbo.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.bulkin.prod.chuckNorris"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
