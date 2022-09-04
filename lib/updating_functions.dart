@@ -23,11 +23,16 @@ Future<JokeCard> updateJokeAccordingToCategory(Category category) async {
     // print(jsonDecode(response.body));
     JokeModel jokeModel = JokeModel.fromJson(jsonDecode(response.body));
     //print(jokeModel);
-    bool isFavourite = await checkJokeCardIsInFavouritesById(jokeModel.id);
+    bool isFavourite = false;
+    try {
+      isFavourite = await checkJokeCardIsInFavouritesById(jokeModel.id);
+    } on FileSystemException catch (_) {
+      isFavourite = false;
+    }
     // print("Is Favourite: $isFavourite");
     JokeCard cardToReturn = JokeCard(jokeModel, isFavourite);
     return cardToReturn;
-  } on Exception catch (_) {
+  } on SocketException catch (_) {
     return JokeCard(
         JokeModel.fromJson({
           "url": "",
@@ -50,11 +55,13 @@ Future<File> get _localFile async {
 
 Future<Map<String, dynamic>> getFavouritesModelsFromFile() async {
   final file = await _localFile;
-  final String content = await file.readAsString();
   try {
+    final String content = await file.readAsString();
+
     Map<String, dynamic> favourites = jsonDecode(content);
     return favourites;
   } catch (e) {
+    file.writeAsString("{}");
     return {};
   }
 }
