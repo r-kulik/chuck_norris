@@ -3,7 +3,6 @@ import 'dart:io';
 
 import 'package:chuck_norris/joke_card.dart';
 import 'package:chuck_norris/config_variables.dart';
-import 'package:flutter/cupertino.dart';
 import 'category_button.dart';
 import 'package:http/http.dart' as http;
 import 'package:path_provider/path_provider.dart';
